@@ -4,7 +4,7 @@ library("neuralnet")
 # Neural nets
 #
 ########################################################################################
-# 
+#
 AND <- c(rep(0,7),1)
 OR <- c(0,rep(1,7))
 binary.data <- data.frame(expand.grid(c(0,1), c(0,1), c(0,1)), AND, OR)
@@ -15,9 +15,6 @@ print(net <- neuralnet(AND+OR~Var1+Var2+Var3, binary.data,
                        linear.output=FALSE))
 ########################################################################################
 
-########################################################################################
-
-#####
 data(infert, package="datasets")
 print(net.infert <- neuralnet(case~parity+induced+spontaneous,  infert,
                               err.fct="ce", linear.output=FALSE, likelihood=TRUE))

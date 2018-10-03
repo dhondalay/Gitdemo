@@ -7,7 +7,7 @@ data[,1] <- NULL
 # Declaring the data frame
 # set.seed(1) # to initialise
 # n <- 1e5 # to be set tot he maximumun number of variables
-# d <- data.frame(age = sample(1:5,n,TRUE), 
+# d <- data.frame(age = sample(1:5,n,TRUE),
 #                lc = rbinom(n,1,.5),
 #                ants = rbinom(n,1,.7))
 ########################################################################################################################
@@ -17,7 +17,9 @@ train = round(n*(60/100))
 test = round(n*(20/100))
 valid = round(n*(20/100))
 ########################################################################################################################
+
 # Splitting the data frame
+
 sp <- split(data, list(d$age, d$lc))
 samples <- lapply(sp, function(x) x[sample(1:nrow(x), 30, FALSE),])
 out <- do.call(rbind, samples)
@@ -52,7 +54,7 @@ cumProbVec <- n
 ret <- NULL
 for( i in 1:nrow(data)){
   rand <- runif(1)
-  whichVec <- which(rand < cumProbVec)[1] 
+  whichVec <- which(rand < cumProbVec)[1]
   ret <- c(ret,sample(cumList[[whichVec]],1))
 }
 ret

@@ -1,3 +1,5 @@
 # Gitdemo
-Git Demo for SNP lab fro only today.
 
+What to do with it ??
+
+Lets see this now..
