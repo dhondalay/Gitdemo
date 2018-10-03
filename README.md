@@ -1,2 +1,3 @@
 # Gitdemo
-Git Demo for SNP lab
+Git Demo for SNP lab fro only today.
+
