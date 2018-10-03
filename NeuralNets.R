@@ -14,25 +14,6 @@ print(net <- neuralnet(AND+OR~Var1+Var2+Var3, binary.data,
                        err.fct="ce",
                        linear.output=FALSE))
 ########################################################################################
-# add this
-
-XOR <- c(0,1,1,0)
-xor.data <- data.frame(expand.grid(c(0,1), c(0,1),c(0,1)), XOR)
-print(net.xor <- neuralnet(XOR~Var1+Var2+Var3, xor.data,
-                           hidden=2,
-                           rep=5))
-plot(net.xor, rep="best")
-summary(net.xor)
-
-
-temp <- c(0,1,1,1,0,1,0,0,1,1)
-dat <- data.frame(data, temp)
-print(net.xor <- neuralnet(temp~S1+S2+S3+S4+S5+S6+S6+S7+S8+S9+S10, dat,
-                           hidden=2,
-                           rep=5))
-plot(net.xor, rep="best")
-
-
 
 ########################################################################################
 
